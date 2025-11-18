@@ -47,7 +47,7 @@ export function BentoCard({
         <Subheading as="h3" dark={dark}>
           {eyebrow}
         </Subheading>
-        <p className="mt-1 text-2xl/8 font-medium tracking-tight text-gray-950 group-data-[dark]:text-white">
+        <p className="mt-1 text-2xl/8 font-medium tracking-tighter text-gray-950 group-data-[dark]:text-white">
           {title}
         </p>
         <p className="mt-2 max-w-[600px] text-sm/6 text-gray-600 group-data-[dark]:text-gray-400">

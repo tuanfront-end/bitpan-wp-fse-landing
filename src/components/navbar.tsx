@@ -1,6 +1,12 @@
 'use client'
 
 import {
+  BUY_LINK,
+  DEMO_URL,
+  DOCUMENT_URL,
+  SUPPORT_URL,
+} from '@/constant/constant'
+import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
@@ -12,16 +18,10 @@ import { Logo } from './logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 
 const links = [
-  { href: 'https://ncmaz-fse.booliitheme.com/', label: 'Live demo' },
-  {
-    href: 'https://themeforest.net/item/ncmaz-blog-magazine-wordpress-theme/34122841',
-    label: 'Buy theme',
-  },
-  { href: 'https://support.booliitheme.com/', label: 'Support' },
-  {
-    href: 'https://nghiaxchis.gitbook.io/ncmaz-blog-magazine-full-site-editing-wordpress',
-    label: 'Docs',
-  },
+  { href: DEMO_URL, label: 'Live demo' },
+  { href: BUY_LINK, label: 'Buy theme' },
+  { href: SUPPORT_URL, label: 'Support' },
+  { href: DOCUMENT_URL, label: 'Docs' },
 ]
 
 function DesktopNav() {

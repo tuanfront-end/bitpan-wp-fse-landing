@@ -1,20 +1,20 @@
 import { BentoCard } from '@/components/bento-card'
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
+import CallToAction from '@/components/cta'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { Navbar } from '@/components/navbar'
 import { Screenshot } from '@/components/screenshot'
 import { Heading, Subheading } from '@/components/text'
-import { ArrowRightIcon } from '@heroicons/react/24/solid'
+import { BUY_LINK, DEMO_URL } from '@/constant/constant'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  description:
-    'Ncmaz Fse - Blog, News and Magazine Full Site Editing WordPress Block theme',
-  title: 'Ncmaz Fse Theme',
+  description: 'Bitpan - WooCommerce FSE block theme',
+  title: 'Bitpan WooCommerce Theme',
 }
 
 function Hero() {
@@ -25,7 +25,7 @@ function Hero() {
         <Navbar
           banner={
             <Link
-              href="https://ncmaz-fse.booliitheme.com/fe-submission"
+              href="https://bitpan-fse.booliitheme.com/"
               target="_blank"
               className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-[hover]:bg-fuchsia-950/30"
             >
@@ -36,31 +36,27 @@ function Hero() {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              New &quot;Frontend Submission Editor&quot; block
-              <ArrowRightIcon className="size-4" />
+              WooCommerce FSE theme
             </Link>
           }
         />
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-          <h1 className="font-display text-balance text-6xl/[0.9] font-medium tracking-tight text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
-            Ncmaz Fse Theme.
+          <h1 className="text-balance text-6xl font-medium tracking-tight text-gray-950 sm:text-8xl">
+            WooCommerce <br />
+            <i className="font-playfair-display font-normal">
+              full site editing
+            </i>{' '}
+            block theme.
           </h1>
-          <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            Ncmaz Fse - Blog, News and Magazine Full Site Editing WordPress
-            Block theme.
+          <p className="mt-8 max-w-xl text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
+            Modern & creative multipurpose WooCommerce FSE block theme for
+            businesses.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button
-              href="https://themeforest.net/item/ncmaz-blog-magazine-wordpress-theme/34122841"
-              target="_blank"
-            >
+            <Button href={BUY_LINK} target="_blank">
               Buy theme
             </Button>
-            <Button
-              variant="secondary"
-              href="https://ncmaz-fse.booliitheme.com/"
-              target="_blank"
-            >
+            <Button variant="secondary" href={DEMO_URL} target="_blank">
               Live demo
             </Button>
           </div>
@@ -74,6 +70,7 @@ function FeatureSection() {
   return (
     <div className="overflow-hidden">
       <Container className="pb-24">
+        <Subheading>Skincare, Fashion, Hijab, and more</Subheading>
         <Heading as="h2" className="max-w-3xl">
           A snapshot of the home page.
         </Heading>
@@ -98,52 +95,53 @@ function BentoSection() {
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
-          eyebrow="Video/Audio Player"
-          title="Video/audio/podcast live player."
-          description="Video/audio/podcast live player. Video player supports landscape and portrait ratios."
+          eyebrow="Fse block theme"
+          title="True Full Site Editing."
+          description="Edit every element—from the Header, Footer, Product Pages, Checkout flow, to widget areas—using the intuitive Block Editor interface. What You See Is What You Get (WYSIWYG) – live and on-site."
           graphic={
-            <div className="h-80 bg-[url(/screenshots/music.png)] bg-[size:1100px_680px] bg-[left_-10px_top_-88px] bg-no-repeat" />
+            <div className="h-80 bg-[url(/screenshots/editor.png)] bg-cover bg-no-repeat" />
           }
           fade={['bottom']}
-          className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
+          className="max-lg:rounded-t-4xl lg:col-span-3"
         />
         <BentoCard
-          eyebrow="Wishlist/Bookmarks"
-          title="The collection of your favorite/saved articles."
-          description="The collection of your favorite/saved articles. Rediscover creative ideas, touching stories, and valuable lessons whenever you want."
+          eyebrow="PageSpeed Insights"
+          title="Superior Performance."
+          description="As a lightweight and streamlined Block Theme, Bitpan is optimized for top-tier speed and load performance, significantly improving your Google PageSpeed scores and SEO rankings."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/wishlist.png)] bg-[size:1100px_650px] bg-[left_-10px_top_-85px] bg-no-repeat" />
+            <div className="absolute inset-0 bg-[url(/screenshots/googlespeed.png)] bg-cover bg-no-repeat" />
           }
           fade={['bottom']}
-          className="lg:col-span-3 lg:rounded-tr-4xl"
+          className="lg:col-span-3"
         />
+
         <BentoCard
-          eyebrow="FE Submission Editor"
-          title="Frontend submission editor."
-          description="Check out our new ‘Frontend Submission Editor’ block. With its clean and premium design, it’s ready for you to try out."
+          eyebrow="Block Patterns"
+          title="Diverse Block Patterns."
+          description="Utilize a comprehensive library of professionally designed Block Patterns, allowing you to construct complex page layouts with simple drag-and-drop operations, saving hours of design time."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/fe-submission.png)] bg-cover bg-no-repeat" />
+            <div className="absolute inset-0 bg-[url(/screenshots/patterns.png)] bg-cover bg-no-repeat" />
+          }
+          className="lg:col-span-2"
+        />
+
+        <BentoCard
+          eyebrow="High-End Design"
+          title="High-Conversion Product Page."
+          description="Minimalist design that highlights visuals and essential product information to drive purchasing decisions."
+          graphic={
+            <div className="absolute inset-0 bg-[url(/screenshots/productpage.png)] bg-cover bg-right bg-no-repeat" />
           }
           className="lg:col-span-2"
         />
         <BentoCard
-          eyebrow="Customized"
-          title="Full site editing functionality."
-          description="Ncmaz Fse is customizable barrier-free universal WordPress block theme with full site editing functionality."
+          eyebrow="High-End Design"
+          title="Mega Menu."
+          description="Enhance site navigation with a customizable mega menu that organizes products and categories effectively."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/editor.png)] bg-cover bg-no-repeat" />
+            <div className="absolute inset-0 bg-[url(/screenshots/megamenu.png)] bg-contain bg-no-repeat" />
           }
-          className="lg:col-span-2 lg:rounded-bl-4xl"
-        />
-
-        <BentoCard
-          eyebrow="Templates, Patterns"
-          title="Multiple Pre-built templates."
-          description="Multiple page and post templates to choose from with ability to create your own custom ones."
-          graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/pages.png)] bg-cover bg-no-repeat" />
-          }
-          className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
+          className="lg:col-span-2"
         />
       </div>
     </Container>
@@ -151,6 +149,93 @@ function BentoSection() {
 }
 
 function Includeds() {
+  const images = [
+    {
+      src: '/screenshots/homeskincare.png',
+      url: 'https://bitpan-fse.booliitheme.com/',
+      alt: 'Home Skincare',
+      width: 3251,
+      height: 1680,
+    },
+    {
+      src: '/screenshots/homehijab.png',
+      url: 'https://bitpan-hijab.booliitheme.com/',
+      alt: 'Home Hijab',
+      width: 3251,
+      height: 1680,
+    },
+    {
+      src: '/screenshots/homefashion.png',
+      url: 'https://bitpan-fashion.booliitheme.com/',
+      alt: 'Home Fashion',
+      width: 3251,
+      height: 1680,
+    },
+    {
+      src: '/screenshots/blog.png',
+      url: 'https://bitpan-fse.booliitheme.com/blog/',
+      alt: 'Blog',
+      width: 3251,
+      height: 1680,
+    },
+    {
+      src: '/screenshots/cartpage.png',
+      url: DEMO_URL,
+      alt: 'Cart',
+      width: 1761,
+      height: 1680,
+    },
+    {
+      src: '/screenshots/productpage.png',
+      url: 'https://bitpan-fse.booliitheme.com/product/exfoliating-mask/',
+      alt: 'Product Page',
+      width: 1761,
+      height: 1680,
+    },
+    {
+      src: '/screenshots/section1.png',
+      url: 'https://bitpan-fashion.booliitheme.com/',
+      alt: 'Section 1',
+      width: 1761,
+      height: 1680,
+    },
+    {
+      src: '/screenshots/section2.png',
+      url: 'https://bitpan-fashion.booliitheme.com/',
+      alt: 'Section 2',
+      width: 1761,
+      height: 1680,
+    },
+    {
+      src: '/screenshots/section3.png',
+      url: 'https://bitpan-hijab.booliitheme.com/',
+      alt: 'Section 3',
+      width: 1761,
+      height: 1680,
+    },
+    {
+      src: '/screenshots/section4.png',
+      url: 'https://bitpan-hijab.booliitheme.com/product/loose-fit-shirt/',
+      alt: 'Section 4',
+      width: 1761,
+      height: 1680,
+    },
+    {
+      src: '/screenshots/contactus.png',
+      url: 'https://bitpan-fse.booliitheme.com/contact-us/',
+      alt: 'Contact Us',
+      width: 1847,
+      height: 1680,
+    },
+    {
+      src: '/screenshots/aboutus.png',
+      url: 'https://bitpan-fse.booliitheme.com/about-us/',
+      alt: 'About Us',
+      width: 1847,
+      height: 1680,
+    },
+  ]
+
   return (
     <div>
       <div className="mt-40 w-full sm:mt-36 lg:mt-28">
@@ -162,111 +247,117 @@ function Includeds() {
 
             <div className="prose prose-slate max-w-2xl space-y-10 prose-a:font-semibold prose-a:text-sky-500 hover:prose-a:text-sky-600 lg:col-span-2">
               <div className="[&>:first-child]:mt-0 [&>:last-child]:mb-0">
+                <strong>
+                  Welcome to the New Era of WordPress eCommerce Design!
+                </strong>
                 <p>
-                  Ncmaz is a Blog, News and Magazine Full Site Editing WordPress
-                  Block theme. It is a modern, clean, and creative theme
-                  suitable for news, magazine, blog, or other websites. It has a
-                  responsive design that displays beautifully across all
-                  devices.
-                </p>
-                <p>
-                  Ncmaz Fse is customizable barrier-free universal WordPress
-                  block theme with{' '}
-                  <strong>full site editing functionality</strong>.
-                  Accessibility ready and versatile to fit any purpose. The
-                  theme comes with beautifully designed pages, patterns,
-                  multiple header and footer layouts, harmonious responsive
-                  typography, and color options you can mix and match to fit
-                  your brand needs in no time.
+                  Bitpan is not just another WooCommerce theme; it’s a leap
+                  forward in performance, flexibility, and design quality. Built
+                  entirely with Full Site Editing (FSE) and the Block
+                  Architecture, Bitpan delivers an unparalleled, visual
+                  customization experience and maximum power without the bloat
+                  of traditional heavy page builders.
                 </p>
               </div>
               <div className="space-y-10">
                 <div>
-                  <strong>Key Features</strong> —
-                  <ol>
-                    <li>
-                      Administrators and developers value its customizability
-                      and clean code.
-                    </li>
-                    <li>
-                      Powerful functionality, great user interaction with
-                      WordPress Interactive API.
-                    </li>
-                    <li>
-                      <strong>
-                        Clean and premium design &quot;Frontend submission
-                        editor&quot;.
-                      </strong>
-                    </li>
-                    <li>Bookmark - post, custom post type, page...</li>
-                    <li>
-                      Wishlist - post, custom post type, page, comment,...
-                    </li>
-                    <li>
-                      <strong>
-                        Video/audio/podcast &quot;live player&quot;.
-                      </strong>
-                    </li>
-                    <li>
-                      Video player supports landscape and portrait ratios.
-                    </li>
-                    <li>Dark mode & ready for RTL version.</li>
-                    <li>
-                      Search page, archive page,... have great search and
-                      filter.
-                    </li>
-                    <li>Woocommerce Support.</li>
-                    <li>
-                      Provides accessible, user friendly experience for website
-                      visitors.
-                    </li>
-                    <li>
-                      Content editors love how easy, yet flexible it is to work
-                      with.
-                    </li>
-                  </ol>
-                </div>
-                <div>
-                  <strong>Full site editing (FSE) </strong> —
+                  <p>
+                    <strong>
+                      Core Feature: Unleashing the Power of Full Site Editing
+                      (FSE)
+                    </strong>{' '}
+                    — Bitpan is a pure Block Theme designed to harness the full
+                    potential of the modern WordPress architecture.
+                  </p>
                   <ul>
                     <li>
-                      Edit every theme part using block-based site editor.
-                    </li>
-                    <li>No coding skills required.</li>
-                    <li>
-                      90+ pre-built block patterns, template parts, templates.
-                    </li>
-                    <li>
-                      Multiple page and post templates to choose from with
-                      ability to create your own custom ones.
+                      <strong>True Full Site Editing:</strong> Edit every
+                      element—from the Header, Footer, Product Pages, Checkout
+                      flow, to widget areas—using the intuitive Block Editor
+                      interface. What You See Is What You Get (WYSIWYG) – live
+                      and on-site.
                     </li>
                     <li>
-                      Multiple header, footer layouts to choose from with
-                      ability to create your own custom ones.
+                      <strong>Superior Performance: </strong> As a lightweight
+                      and streamlined Block Theme, Bitpan is optimized for
+                      top-tier speed and load performance, significantly
+                      improving your Google PageSpeed scores and SEO rankings.
                     </li>
-                    <li>3 default global styles variants to choose from.</li>
+                    <li>
+                      <strong>Diverse Block Patterns:</strong> Utilize a
+                      comprehensive library of professionally designed Block
+                      Patterns, allowing you to construct complex page layouts
+                      with simple drag-and-drop operations, saving hours of
+                      design time.
+                    </li>
+                    <li>
+                      <strong>Global Styles Control:</strong> Effortlessly
+                      change fonts, color palettes, and layouts for the entire
+                      website via the FSE Styles interface, ensuring instant
+                      design consistency.
+                    </li>
                   </ul>
                 </div>
 
                 <div>
-                  <strong>Accessibility</strong> —
+                  <p>
+                    <strong>Proven Premium & High-End Design</strong> — The
+                    aesthetic foundation of Bitpan is derived from our
+                    previously ThemeForest-approved and highly-rated Next.js
+                    eCommerce template, ensuring a high-quality, professional
+                    look.
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Premium Aesthetic:</strong> Features a modern,
+                      clean, and luxurious interface, meticulously refined to
+                      put the focus squarely on your products and enhance the
+                      customer’s shopping journey.
+                    </li>
+                    <li>
+                      <strong>Multipurpose Mastery:</strong> With its flexible
+                      and adaptable design, Bitpan is easy to customize and
+                      perfectly suited for various business niches: Fashion &
+                      Clothing, Skincare & Cosmetics, Shoes & Accessories,
+                      Jewelry & Handmade, Interior & Furniture, Hijab, and more.
+                    </li>
+                    <li>
+                      <strong>Pixel-Perfect Responsiveness:</strong> Guarantees
+                      your store looks professional, seamless, and stunning on
+                      every device, including Desktop, Tablet, and Mobile.
+                    </li>
+                    <li>
+                      <strong>High-Conversion Product Pages: </strong>{' '}
+                      Minimalist design that highlights visuals and essential
+                      product information to drive purchasing decisions.
+                    </li>
+                    <li>
+                      <strong>Customizable Cart & Checkout:</strong> Gain full
+                      control over the layout and styling of the most critical
+                      stages of the sales funnel.
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>Accessibility</strong> — Bitpan is built with
+                    accessibility at its core, ensuring an inclusive experience
+                    for all users.
+                  </p>
                   <ul>
                     <li>
                       Fully accessibility ready WordPress theme, passes WCAG 2.2
                       level AA accessibility requirements
                     </li>
-                    <li>Disability-friendly, barrier-free</li>
+                    <li>User friendly, Disability-friendly, Barrier-free</li>
                     <li>Keyboard and screen reader friendly</li>
-                    <li>With proper headings structure and color contrast</li>
                     <li>Optimized for readability</li>
-                    <li>Responds adaptively to any screen size</li>
                     <li>
                       Fully localization ready, multilingual, with right-to-left
                       (RTL) languages support
                     </li>
-                    <li>User friendly</li>
                     <li>Mega menu, dropdown, modal, icon blocks</li>
-                    <li>Mobile friendly responsive design</li>
                     <li>
                       Full WordPress block editor compatibility – no need for
                       page builders!
@@ -275,45 +366,19 @@ function Includeds() {
                       Enhancing user experience with block variations
                       (predefined block variants)
                     </li>
-                    <li>Archive page, search page, author page filter</li>
                   </ul>
                 </div>
-                <div>
-                  <strong>Customization</strong> —
-                  <ul>
-                    <li>Full theme sections customization via site editor</li>
-                    <li>
-                      Use any Google Fonts font or set up your custom fonts
-                    </li>
-                    <li>
-                      Design consistency assured with global font and color
-                      names
-                    </li>
-                    <li>Customizable content widths</li>
-                    <li>
-                      Easy to use with full control over theme parts (layouts)
-                    </li>
-                    <li>
-                      Built the right way with WordPress coding standards &amp;
-                      requirements
-                    </li>
-                    <li>Search engine optimized (SEO), speed optimized</li>
-                    <li>
-                      Secure, clean, semantic, flexible, extensible
-                      developer-friendly code
-                    </li>
-                    <li>100% GPL licensed</li>
-                  </ul>
-                </div>
+
                 <p>
-                  <strong>Modern & Responsive design</strong> — the template has
-                  a modern design that will make your site stand out from the
-                  competition. The template is designed to look great on all
-                  devices, from mobile to desktop.
+                  <strong>SEO-friendly</strong> — the theme is designed with SEO
+                  in mind, so your site will rank higher in search engines.
                 </p>
                 <p>
-                  <strong>SEO-friendly</strong> — the template is designed with
-                  SEO in mind, so your site will rank higher in search engines.
+                  <strong>Why Choose Bitpan?</strong> — Choosing Bitpan means
+                  selecting the future of WordPress technology (FSE) combined
+                  with premium design quality, providing an eCommerce solution
+                  that is both powerful in performance and exquisite in
+                  aesthetics.
                 </p>
               </div>
             </div>
@@ -323,335 +388,26 @@ function Includeds() {
               Screenshots
             </h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2">
-              <a
-                href="https://ncmaz-fse.booliitheme.com/demo-article-single-with-sidebar-template/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/screenshots/sidebar.png"
-                  width={3328}
-                  height={1910}
-                  alt="Picture of the single article with sidebar"
-                  className="aspect-[3328/1910] rounded-lg bg-slate-200 ring-1 ring-slate-900/10"
-                  sizes="(min-width: 1024px) 35vw, ((min-width: 700px) and (max-width: 1024px)) 50vw, 100vw"
-                />
-              </a>
-              <a
-                href="https://ncmaz-fse.booliitheme.com/?s=text"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/screenshots/search.png"
-                  width={3328}
-                  height={1910}
-                  alt="Picture of the search page"
-                  className="aspect-[3328/1910] rounded-lg bg-slate-200 ring-1 ring-slate-900/10"
-                  sizes="(min-width: 1024px) 35vw, ((min-width: 700px) and (max-width: 1024px)) 50vw, 100vw"
-                />
-              </a>
-              <a
-                href="https://ncmaz-fse.booliitheme.com/author/boolii/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/screenshots/author.png"
-                  width={3328}
-                  height={1910}
-                  alt="Picture of the author"
-                  className="aspect-[3328/1910] rounded-lg bg-slate-200 ring-1 ring-slate-900/10"
-                  sizes="(min-width: 1024px) 35vw, ((min-width: 700px) and (max-width: 1024px)) 50vw, 100vw"
-                />
-              </a>
-              <a
-                href="https://ncmaz-fse.booliitheme.com/demo-article-single-2-with-sidebar-template/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/screenshots/single2.png"
-                  width={3328}
-                  height={1910}
-                  alt="Picture of the single article 2 with sidebar"
-                  className="aspect-[3328/1910] rounded-lg bg-slate-200 ring-1 ring-slate-900/10"
-                  sizes="(min-width: 1024px) 35vw, (min-width: 700px) 50vw, 100vw"
-                />
-              </a>
-              <a
-                href="https://ncmaz-fse.booliitheme.com/hello-world/#comments"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/screenshots/comments.png"
-                  width={3310}
-                  height={1914}
-                  alt="Picture of the comments"
-                  className="aspect-[3310/1950] rounded-lg bg-slate-200 ring-1 ring-slate-900/10"
-                  sizes="(min-width: 1024px) 35vw, ((min-width: 700px) and (max-width: 1024px)) 50vw, 100vw"
-                />
-              </a>
-
-              <a
-                href="https://ncmaz-fse.booliitheme.com/home-page-4/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/screenshots/music.png"
-                  width={3128}
-                  height={1910}
-                  alt="Picture of the Music section"
-                  className="aspect-[3328/2050] rounded-lg bg-slate-200 ring-1 ring-slate-900/10"
-                  sizes="(min-width: 1024px) 35vw, ((min-width: 700px) and (max-width: 1024px)) 50vw, 100vw"
-                />
-              </a>
-
-              <a
-                href="https://ncmaz-fse.booliitheme.com/fe-submission"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/screenshots/fe-submission.png"
-                  width={2175}
-                  height={2304}
-                  alt="Picture of the FE submission"
-                  className="aspect-[2175/2304] rounded-lg bg-slate-200 ring-1 ring-slate-900/10"
-                  sizes="(min-width: 1024px) 35vw, ((min-width: 700px) and (max-width: 1024px)) 50vw, 100vw"
-                />
-              </a>
+              {images.map(({ src, alt, width, height, url }, index) => (
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={index}
+                >
+                  <Image
+                    src={src}
+                    width={width}
+                    height={height}
+                    alt={alt}
+                    className="rounded-lg bg-slate-200 ring-1 ring-slate-900/10"
+                    sizes="(min-width: 1024px) 35vw, (min-width: 700px) 50vw, 100vw"
+                  />
+                </a>
+              ))}
             </div>
           </section>
           <div></div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function Faqs() {
-  return (
-    <section id="faqs" className="my-28 w-full">
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-14 gap-y-16 lg:max-w-5xl lg:px-8 xl:max-w-none xl:grid-cols-12 xl:px-0">
-        <div className="lg:col-span-4">
-          <h2 className="text-base font-semibold leading-7 text-indigo-500">
-            Frequently asked questions
-          </h2>
-          <p className="mt-4 text-4xl font-medium tracking-tight text-slate-900 xl:text-5xl xl:leading-[3.5rem]">
-            Everything you need to know
-          </p>
-        </div>
-        <div className="-mb-4 space-y-12 lg:col-span-8 xl:col-span-7 xl:col-start-6">
-          <section>
-            <h3 className="text-lg font-semibold">
-              The Full Site Editor (FSE) in WordPress offers many significant
-              benefits <br /> for website creators and editors 👇
-            </h3>
-            <dl className="prose prose-slate mt-8 max-w-2xl divide-y divide-slate-100 prose-a:font-semibold prose-a:text-sky-500 hover:prose-a:text-sky-600">
-              <div>
-                <p>
-                  <strong>Enhanced User Experience:</strong>
-                </p>
-                <ul>
-                  <li>
-                    <strong>Intuitive Interface:</strong> FSE provides a more
-                    user-friendly and visually appealing interface, making it
-                    easier for users to create and manage websites.
-                  </li>
-                  <li>
-                    <strong>Real-time Editing:</strong> Changes made in the
-                    editor are instantly reflected on the front end, allowing
-                    for immediate feedback and a streamlined workflow.
-                  </li>
-                  <li>
-                    <strong>Global Styles:</strong> FSE introduces global styles
-                    that can be applied consistently across the entire website,
-                    ensuring a cohesive and branded look.
-                  </li>
-                </ul>
-                <p>
-                  <strong>Improved Design Flexibility:</strong>
-                </p>
-                <ul>
-                  <li>
-                    <strong>Block-Based Editing:</strong> The block-based system
-                    allows for greater flexibility in designing layouts and
-                    content, with various blocks available for different types
-                    of content (text, images, galleries, etc.).
-                  </li>
-                  <li>
-                    <strong>Customizability:</strong> Blocks can be customized
-                    with various settings and styles, giving users more control
-                    over the appearance of their website.
-                  </li>
-                  <li>
-                    <strong>Theme Independence:</strong> FSE reduces reliance on
-                    themes, allowing for more customization and flexibility in
-                    website design.
-                  </li>
-                </ul>
-                <p>
-                  <strong>Enhanced Performance:</strong>
-                </p>
-                <ul>
-                  <li>
-                    <strong>Optimized Code:</strong> FSE generates cleaner and
-                    more optimized HTML code, potentially improving website
-                    performance and loading times.
-                  </li>
-                  <li>
-                    <strong>Reduced Dependencies:</strong> By reducing reliance
-                    on themes, FSE can minimize the number of files and
-                    dependencies, leading to faster page loads.
-                  </li>
-                </ul>
-                <p>
-                  <strong>Better Accessibility:</strong>
-                </p>
-                <ul>
-                  <li>
-                    <strong>Built-in Accessibility Features:</strong> FSE
-                    incorporates accessibility features to ensure that websites
-                    are accessible to users with disabilities.
-                  </li>
-                  <li>
-                    <strong>Compliance with Standards:</strong> FSE helps
-                    website creators comply with accessibility standards like
-                    WCAG.
-                  </li>
-                </ul>
-                <p>
-                  <strong>Streamlined Workflow:</strong>
-                </p>
-                <ul>
-                  <li>
-                    <strong>Centralized Management:</strong> FSE provides a
-                    centralized platform for managing all aspects of a website,
-                    from content creation to design and customization.
-                  </li>
-                  <li>
-                    <strong>Collaboration:</strong> FSE facilitates
-                    collaboration among team members, making it easier to work
-                    on websites together.
-                  </li>
-                  <li>
-                    <strong>Version Control:</strong> FSE offers version control
-                    features to track changes and revert to previous versions if
-                    needed.
-                  </li>
-                </ul>
-                <p>
-                  <strong>
-                    The Full Site Editor in WordPress represents a significant
-                    step forward in website creation and management, offering a
-                    more intuitive, flexible, and efficient experience.
-                  </strong>
-                </p>
-              </div>
-            </dl>
-          </section>
-
-          <section>
-            <h3 className="text-sm font-semibold leading-7 text-slate-400">
-              General
-            </h3>
-            <dl className="mt-2 divide-y divide-slate-100">
-              <details className="group py-4 marker:content-['']">
-                <summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-indigo-600 [&::-webkit-details-marker]:hidden">
-                  What does “lifetime access” mean exactly?
-                  <svg
-                    className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-indigo-500"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M18 12H6" />
-                    <path className="group-open:hidden" d="M12 6v12" />
-                  </svg>
-                </summary>
-                <div className="pb-6 pt-6">
-                  <div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-500">
-                    <p>
-                      Ncmaz theme products are a{' '}
-                      <strong>
-                        one-time purchase, with no recurring subscription
-                      </strong>
-                      . When you purchase the Ncmaz theme, you have access to
-                      all of the content in that product forever, and life time
-                      of updates.
-                    </p>
-                  </div>
-                </div>
-              </details>
-              <details className="group py-4 marker:content-['']">
-                <summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-indigo-600 [&::-webkit-details-marker]:hidden">
-                  Do you offer technical support?
-                  <svg
-                    className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-indigo-500"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M18 12H6" />
-                    <path className="group-open:hidden" d="M12 6v12" />
-                  </svg>
-                </summary>
-                <div className="pb-6 pt-6">
-                  <div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-500">
-                    <p>
-                      In case you have any questions that are beyond the scope
-                      of this documentation, please join the{' '}
-                      <a href="https://nghiaxchis.gitbook.io/ncmaz-blog-magazine-full-site-editing-wordpress">
-                        BooliiTheme support forum
-                      </a>
-                      .
-                    </p>
-                  </div>
-                </div>
-              </details>
-            </dl>
-          </section>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function CallToAction() {
-  return (
-    <div className="relative pb-16 pt-20 text-center sm:py-24">
-      <hgroup>
-        <Subheading>Get started</Subheading>
-        <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-          Get started today.
-        </p>
-      </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-        It’s time to improve your website. Buy the Ncmaz theme so you can feel
-        like you’re doing something productive.
-      </p>
-      <div className="mt-6">
-        <div className="mt-12 flex flex-col items-center justify-center gap-x-6 gap-y-4 sm:flex-row">
-          <Button
-            href="https://themeforest.net/item/ncmaz-blog-magazine-wordpress-theme/34122841"
-            target="_blank"
-          >
-            Buy theme
-          </Button>
-          <Button
-            variant="secondary"
-            href="https://ncmaz-fse.booliitheme.com/"
-            target="_blank"
-          >
-            Live demo
-          </Button>
         </div>
       </div>
     </div>
@@ -677,7 +433,7 @@ export default function Home() {
 
         <Container className="relative">
           <Includeds />
-          <Faqs />
+          {/* <Faqs /> */}
         </Container>
       </main>
       <Footer />
