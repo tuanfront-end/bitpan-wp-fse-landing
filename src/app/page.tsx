@@ -6,7 +6,6 @@ import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { Navbar } from '@/components/navbar'
-import { Screenshot } from '@/components/screenshot'
 import { Heading, Subheading } from '@/components/text'
 import { BUY_LINK, DEMO_URL } from '@/constant/constant'
 import type { Metadata } from 'next'
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
 function Hero() {
   return (
     <div className="relative">
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-inset ring-black/5" />
+      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
       <Container className="relative">
         <Navbar
           banner={
@@ -40,8 +39,8 @@ function Hero() {
             </Link>
           }
         />
-        <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-          <h1 className="text-balance text-6xl font-medium tracking-tight text-gray-950 sm:text-8xl">
+        <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
+          <h1 className="text-4xl font-medium tracking-tight text-balance text-gray-950 sm:text-6xl lg:text-7xl xl:text-8xl">
             WooCommerce <br />
             <i className="font-playfair-display font-normal">
               full site editing
@@ -74,11 +73,13 @@ function FeatureSection() {
         <Heading as="h2" className="max-w-3xl">
           A snapshot of the home page.
         </Heading>
-        <Screenshot
+        <Image
           width={2662}
           height={2062}
           src="/screenshots/screenshot.png"
-          className="mt-16 h-144 sm:h-auto sm:w-304"
+          alt="home page screenshot"
+          className="mt-8 rounded-2xl shadow-md sm:mt-16"
+          priority
         />
       </Container>
     </div>
@@ -102,7 +103,7 @@ function BentoSection() {
             <div className="h-80 bg-[url(/screenshots/editor.png)] bg-cover bg-no-repeat" />
           }
           fade={['bottom']}
-          className="max-lg:rounded-t-4xl lg:col-span-3"
+          className="lg:col-span-3"
         />
         <BentoCard
           eyebrow="PageSpeed Insights"
@@ -238,14 +239,14 @@ function Includeds() {
 
   return (
     <div>
-      <div className="mt-40 w-full sm:mt-36 lg:mt-28">
+      <div className="mt-20 w-full sm:mt-36 lg:mt-28">
         <div className="mx-auto max-w-160 space-y-20 divide-y divide-slate-200 sm:space-y-24 lg:max-w-none lg:space-y-32">
           <section className="grid grid-cols-1 items-baseline gap-x-6 gap-y-10 lg:grid-cols-3">
             <h2 className="text-2xl font-medium tracking-tight text-slate-900">
               What’s included
             </h2>
 
-            <div className="prose prose-slate max-w-2xl space-y-10 prose-a:font-semibold prose-a:text-sky-500 prose-a:hover:text-sky-600 lg:col-span-2">
+            <div className="prose prose-slate prose-a:font-semibold prose-a:text-sky-500 prose-a:hover:text-sky-600 max-w-2xl space-y-10 lg:col-span-2">
               <div className="*:first:mt-0 *:last:mb-0">
                 <strong>
                   Welcome to the New Era of WordPress eCommerce Design!
@@ -384,7 +385,7 @@ function Includeds() {
             </div>
           </section>
           <section className="grid grid-cols-1 gap-x-6 gap-y-10 pt-10 lg:grid-cols-3">
-            <h2 className="text-2xl font-semibold leading-9 tracking-tight text-slate-900">
+            <h2 className="text-2xl leading-9 font-semibold tracking-tight text-slate-900">
               Screenshots
             </h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2">
@@ -419,7 +420,7 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
       <main>
-        <div className="bg-linear-to-b from-white from-50% to-gray-100 pb-32 pt-20">
+        <div className="bg-linear-to-b from-white from-50% to-gray-100 pt-20 pb-20 sm:pb-32">
           <FeatureSection />
           <BentoSection />
         </div>

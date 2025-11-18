@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@headlessui/react": "^2.1.1",
@@ -16,23 +16,27 @@
     "dayjs": "^1.11.12",
     "feed": "^4.2.2",
     "framer-motion": "^11.2.10",
-    "next": "14.2.11",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "16.0.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "react-use-measure": "^2.1.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.11",
+    "@types/react": "19.2.6",
+    "@types/react-dom": "19.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.3",
     "postcss": "^8.4.40",
     "prettier": "^3.3.2",
     "prettier-plugin-organize-imports": "^4.0.0",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "tailwindcss": "^4.1.17",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@types/react": "19.2.6",
+    "@types/react-dom": "19.2.3"
   }
 }
