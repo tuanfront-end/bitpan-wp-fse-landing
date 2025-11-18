@@ -27,7 +27,7 @@ function Hero() {
             <Link
               href="https://bitpan-fse.booliitheme.com/"
               target="_blank"
-              className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-[hover]:bg-fuchsia-950/30"
+              className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-fuchsia-950/30"
             >
               <svg className="me-1 h-4 w-4 fill-white" viewBox="0 0 24 24">
                 <path
@@ -78,7 +78,7 @@ function FeatureSection() {
           width={2662}
           height={2062}
           src="/screenshots/screenshot.png"
-          className="mt-16 h-[36rem] sm:h-auto sm:w-[76rem]"
+          className="mt-16 h-144 sm:h-auto sm:w-304"
         />
       </Container>
     </div>
@@ -239,14 +239,14 @@ function Includeds() {
   return (
     <div>
       <div className="mt-40 w-full sm:mt-36 lg:mt-28">
-        <div className="mx-auto max-w-[40rem] space-y-20 divide-y divide-slate-200 sm:space-y-24 lg:max-w-none lg:space-y-32">
+        <div className="mx-auto max-w-160 space-y-20 divide-y divide-slate-200 sm:space-y-24 lg:max-w-none lg:space-y-32">
           <section className="grid grid-cols-1 items-baseline gap-x-6 gap-y-10 lg:grid-cols-3">
             <h2 className="text-2xl font-medium tracking-tight text-slate-900">
               What’s included
             </h2>
 
-            <div className="prose prose-slate max-w-2xl space-y-10 prose-a:font-semibold prose-a:text-sky-500 hover:prose-a:text-sky-600 lg:col-span-2">
-              <div className="[&>:first-child]:mt-0 [&>:last-child]:mb-0">
+            <div className="prose prose-slate max-w-2xl space-y-10 prose-a:font-semibold prose-a:text-sky-500 prose-a:hover:text-sky-600 lg:col-span-2">
+              <div className="*:first:mt-0 *:last:mb-0">
                 <strong>
                   Welcome to the New Era of WordPress eCommerce Design!
                 </strong>
@@ -419,7 +419,7 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
       <main>
-        <div className="bg-gradient-to-b from-white from-50% to-gray-100 pb-32 pt-20">
+        <div className="bg-linear-to-b from-white from-50% to-gray-100 pb-32 pt-20">
           <FeatureSection />
           <BentoSection />
         </div>

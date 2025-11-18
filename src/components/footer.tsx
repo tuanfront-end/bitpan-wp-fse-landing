@@ -18,7 +18,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="font-medium text-gray-950 data-[hover]:text-gray-950/75"
+        className="font-medium text-gray-950 data-hover:text-gray-950/75"
       />
     </li>
   )
@@ -96,7 +96,7 @@ function SocialLinks() {
         href="https://facebook.com"
         target="_blank"
         aria-label="Visit us on Facebook"
-        className="text-gray-950 data-[hover]:text-gray-950/75"
+        className="text-gray-950 data-hover:text-gray-950/75"
       >
         <SocialIconFacebook className="size-4" />
       </Link>
@@ -104,7 +104,7 @@ function SocialLinks() {
         href="https://x.com"
         target="_blank"
         aria-label="Visit us on X"
-        className="text-gray-950 data-[hover]:text-gray-950/75"
+        className="text-gray-950 data-hover:text-gray-950/75"
       >
         <SocialIconX className="size-4" />
       </Link>
@@ -112,7 +112,7 @@ function SocialLinks() {
         href="https://linkedin.com"
         target="_blank"
         aria-label="Visit us on LinkedIn"
-        className="text-gray-950 data-[hover]:text-gray-950/75"
+        className="text-gray-950 data-hover:text-gray-950/75"
       >
         <SocialIconLinkedIn className="size-4" />
       </Link>
